@@ -21,11 +21,113 @@ header {
 
 header h1 {
     margin: 0;
-    font-weight: normal;
+    font-weight: 550;
+    padding: 10px 0 0 20px;
+    font-size: 1.7em;
 }
 
 main {
-    background: url('polaroid.png') no-repeat center 100px;
+    background: url('../images/polaroid.png') no-repeat center 100px;
     margin: 0 auto;
     width: 1000px;
+}
+
+.hero {
+    text-align: center;
+    min-height: 800px;
+}
+
+.hero h2 {
+    font-size: 9em;
+    line-height: 1em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.details h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.3em;
+}
+
+.details p {
+    max-width: 875px;
+    text-align: left;
+    font-size: 1.7em;
+    font-weight: 250;
+    padding-left: 60px;
+    padding-bottom: 20px;
+}
+
+.details ul {
+    padding-left: 54px;
+    padding-bottom: 50px;
+}
+
+.details ul li {
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 0 0 0 70px;
+    font-size: 1.7em;
+    font-weight: 250;
+    line-height: 1.5em;
+}
+
+.details ul li.wifi {
+    background: url('../images/wifi-solid.svg') no-repeat center left;
+}
+
+.details ul li.upload {
+    background: url('../images/cloud-arrow-up-solid.svg') no-repeat center left;
+}
+
+.details ul li.qr {
+    background: url('../images/qrcode-solid.svg') no-repeat center left;
+}
+
+.details ul li.share {
+    background: url('../images/photo-film-solid.svg') no-repeat center left;
+}
+
+.cta {
+    padding-bottom: 100px;
+    text-align: center;
+    margin: auto;
+    padding-left: 150px;
+}
+
+.cta form.form {
+    background-color: #dfdede;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    max-width: 650px;
+}
+
+.cta h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.3em;
+    padding-right: 150px;
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 25px;
+    border: none;
+    margin-bottom: 10px;
+    background-color: rgb(247, 246, 246);
+    font-size: 1em;
+}
+
+input[type="button"] {
+    width: 25%;
+    padding: 25px;
+    border: none;
+    background-color: rgb(251, 57, 57);
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: BOLD;
 }

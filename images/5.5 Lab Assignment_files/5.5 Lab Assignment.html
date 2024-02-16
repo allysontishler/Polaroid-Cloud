@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- saved from url=(0150)https://d2l.msu.edu/content/enforced/2118383-SS24MERGED-nLRFKJSh-224213339-224213338-224213339-/5.5%20Lab%20Assignment.html?ou=2118383&d2l_body_type=3 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link rel="stylesheet" href="./bootstrap.min.css">
+<link rel="stylesheet" href="./all.min.css">
+<link rel="stylesheet" href="./styles.min.css">
+<link rel="stylesheet" href="./custom.css">
+   <script src="./jquery-3.3.1.slim.min.js" defer=""></script>
+   <script src="./popper.min.js" defer=""></script>
+   <script src="./bootstrap.min.js" defer=""></script>
+   <script src="./scripts.min.js" defer=""></script>
+   <title>5.5 Lab Assignment</title>
+<script>function lti_launch( vars, target ) {
+						var query = '';
+						var new_tab = false;
+
+						for(var key in vars) {
+							if(query.length == 0) {
+								query += '?' + key + '=' + encodeURIComponent(vars[key]);
+							}
+							else {
+								query += '&' + key + '=' + encodeURIComponent(vars[key]);
+							}
+						}
+
+						var url = '/d2l/customization/pearsonlti/2118383/Launch' + query;(target == '_blank') ? window.open( url, '_blank' ) : location.replace( url );}</script><script src="./mathjax.js" type="module"></script><script>document.addEventListener('DOMContentLoaded', function() {
+					if (document.querySelector('math') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
+						document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
+							elm.setAttribute('style', 'display: block; height: 0.5rem;');
+						});
+
+						window.D2L.MathJax.loadMathJax({
+							'outputScale': 1.5,
+							'renderLatex': true
+						});
+					}
+				});</script><script src="./prism.js" type="module"></script><script>document.addEventListener('DOMContentLoaded', function() {
+					document.querySelectorAll('.d2l-code').forEach(code => {
+						window.D2L.Prism.formatCodeElement(code);
+					});
+				});</script><script>document.addEventListener('DOMContentLoaded', function() {
+						if (document.documentElement.hasAttribute('lang')) return;
+						document.documentElement.setAttribute('lang', 'en-us'); 						
+					});</script><script>document.addEventListener('DOMContentLoaded', function() {
+						if (document.head.querySelector('title')) return;
+						var handleAppendTitle = function(evt) {
+							if (!evt || !evt.data) return;
+
+							try {
+								var data = JSON.parse(evt.data);
+								if (data.handler !== 'd2l.iframe.requestPageTitle' || !data.pageTitle) return;
+
+								window.removeEventListener('message', handleAppendTitle, false);
+
+								var titleElm = document.createElement('title');
+								titleElm.textContent = data.pageTitle;
+								document.head.appendChild(titleElm);
+							} catch (e) {}	
+						};
+
+						window.addEventListener('message', handleAppendTitle, false);
+						window.parent.postMessage(JSON.stringify({ handler: 'd2l.iframe.requestPageTitle' }), '*');
+					});</script><script>window.addEventListener('message', function(event) { 
+					if( !event.data ) {
+						return;
+					}
+
+					var params;
+					try {
+						params = JSON.parse( event.data );
+					}
+					catch {
+						return;
+					}
+					if( !params.subject || params.subject !== 'lti.frameResize' ) {
+						return;
+					}
+
+					const MAX_FRAME_HEIGHT = 10000
+					if( !params.height || params.height < 1 || params.height > MAX_FRAME_HEIGHT ) {
+						console.warn( 'Invalid height value received, aborting' );
+						return;
+					}
+					var el = document.getElementsByTagName( 'iframe' );
+					for ( var i=0; i < el.length; i++ ) {
+						if( el[i].contentWindow === event.source ) {
+							el[i].style.height = params.height + 'px';
+							el[i].style.width = '100%';
+							console.info( 'Setting iFrame height to ' + params.height );
+							console.info( 'Setting iFrame width to 100%' );
+						}
+					}
+				});</script></head><body style="overflow-y: hidden;"><main>
+<div class="container-fluid">
+<div class="row"><br>
+<div class="col-sm-10 offset-sm-1"><!-- DO NOT EDIT CODE ABOVE THIS LINE -->
+<h1>5.5 Lab Assignment</h1>
+<hr>
+<h2>5.5 Lab: Polaroid Cloud</h2>
+<p>In this lab you'll re-create a Figma design for a fictitious Polaroid product called "Polaroid Cloud." You'll need to use your knowledge and research skills to complete the unfinished parts not covered in the videos.</p>
+<h2>Lab Objectives</h2>
+<ol class="large-number">
+<li>Create a new 11ty site with a focus on reusable components. Use CSS and 11ty features to help "DRY" (Don't Repeat Yourself) up your markup and style.</li>
+<li>Use CSS custom properties to create reusable components and rules within you CSS file.</li>
+<li>Use 11ty partials and templates to create custom cards with minimal repeated HTML and CSS.</li>
+</ol>
+<h2>Client Design Notes</h2>
+<p>Figma files and other resources to help you with this lab can be found in the "5.4 Additional Resources" section of this module.</p>
+<p><img src="./polaroid-cloud.png" alt="Polaroid" title="Polaroid" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></p>
+<h2>Lab Requirements</h2>
+<p>The goal of this lab is to give you one more practice build using 11ty before we move into our more advanced JavaScript work. We're still going to be doing HTML and CSS, but our focus will be on front-end frameworks like React, Alpine, and HTMX. Use this as an opportunity to practice your skills around building out front-ends based on design assets/Figma files and separating reusable components into templates, layouts, and custom properties.</p>
+<ol>
+<li><span style="font-size: 1.1875rem; color: rgb(83, 80, 84); font-weight: 400;">Create a new base 11ty site starting from Jeff's GitHub 11ty Boilerplate. Make sure you create a new repository based on the template repo (see first video): <a href="https://github.com/jsiarto/11ty-boilerplate" target="_blank" rel="noopener" class="new-window" id="new-window0" title="Opens in new window/tab" data-toggle="tooltip">https://github.com/jsiarto/11ty-boilerplate<span class="sr-only">(this link opens in a new window/tab)</span></a></span></li>
+<li><span style="font-size: 1.1875rem; color: rgb(83, 80, 84); font-weight: 400;">Using your knowledge of HTML and CSS (and your MDN docs, of course) recreate the design above as closely as possible. Reference the videos to get you started.</span></li>
+<li><span style="font-size: 1.1875rem; color: rgb(83, 80, 84); font-weight: 400;">Use CSS Custom Properties for values that need to be reused throughout (colors, fonts, sizing, etc).</span></li>
+<li><span style="font-size: 1.1875rem; color: rgb(83, 80, 84); font-weight: 400;">The final site must make use of at least one 11ty layout file for the main HTML headers and footers, and a partial/template for the planet cards.</span></li>
+<li>Your site should be published to Netlify and public links from GitHub and Netlify should be submitted to D2L.</li>
+<li><span style="font-size: 1.1875rem; color: rgb(83, 80, 84);">Submit your public URLs to the <strong>5.5</strong></span><strong><span style="font-size: 1.1875rem; color: rgb(83, 80, 84);">&nbsp;Lab Assignment</span></strong><span style="font-size: 1.1875rem; color: rgb(83, 80, 84);"> dropbox.</span></li>
+</ol>
+<!-- DO NOT EDIT CODE BELOW THIS LINE --></div>
+<div class="col-12"><footer>
+<p><img src="./logo.png" alt=""></p>
+</footer></div>
+</div>
+</div>
+</main></body></html>
